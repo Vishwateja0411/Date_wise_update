@@ -1,0 +1,77 @@
+
+19-02-2026
+
+📘 Find Kth Largest Element
+
+🔹 Approach (Sorting Method)
+
+Sort the array in ascending order.
+
+The k-th largest element will be at index -k.
+
+Return that element.
+
+🔹 Steps
+
+Sort the array:
+
+nums.sort()
+
+Return:
+
+nums[-k]
+
+
+📘 Median of Two Sorted Arrays
+
+🔹 Approach (Merge + Sort Method)
+
+Combine both arrays into one.
+
+Sort the merged array.
+
+If length is odd → middle element is median.
+
+If length is even → average of two middle elements.
+
+🔹 Steps
+
+Merge arrays:
+
+merged = sorted(nums1 + nums2)
+
+Find length n
+
+If n is odd:
+
+merged[n // 2]
+
+Else:
+
+(merged[n//2 - 1] + merged[n//2]) / 2
+
+📘 Product of Array Except Self
+
+🔹 Approach (Prefix & Suffix Product)
+
+Use two passes:
+
+Prefix product → product of elements on the left
+
+Suffix product → product of elements on the right
+
+Multiply both to get final result.
+
+🔹 Steps
+
+Create result array initialized with 1.
+
+Traverse left to right:
+
+Store prefix product in result.
+
+Traverse right to left:
+
+Multiply suffix product with existing value.
+
+Return result array.

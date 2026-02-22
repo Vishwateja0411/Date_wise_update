@@ -1,0 +1,70 @@
+📘 Lower Bound (Binary Search)
+
+🔹 Approach (Binary Search)
+
+Use binary search on the sorted array.
+
+If arr[mid] >= x:
+
+Store mid as possible answer
+
+Move left to find smaller valid index
+
+Else:
+
+Move right
+
+Return stored answer.
+
+🔹 Steps
+
+Initialize:
+
+low = 0
+high = len(arr) - 1
+ans = len(arr)
+
+While low <= high:
+
+Find mid index
+
+If condition satisfied → update answer and move left
+
+Else move right
+
+Return answer
+
+📘 Upper Bound (Binary Search)
+🔹 Approach (Binary Search)
+
+Use binary search on the sorted array.
+
+If arr[mid] > x:
+
+Store mid as possible answer
+
+Move left to find smaller valid index
+
+Else:
+
+Move right
+
+Return stored answer.
+
+🔹 Steps
+
+Initialize:
+
+low = 0
+high = len(arr) - 1
+ans = len(arr)
+
+While low <= high:
+
+Calculate mid
+
+If condition satisfied → update answer and move left
+
+Else move right
+
+Return answer

@@ -1,0 +1,88 @@
+20-02-2026
+
+📘 Two Sum (Two Pointer Approach)
+
+🔹 Approach (Two Pointer Method)
+
+First sort the array.
+Use two pointers:
+i → start of array
+j → end of array
+Calculate current sum:
+If sum equals target → pair found
+If sum is smaller → move left pointer forward
+If sum is larger → move right pointer backward
+Continue until pointers meet.
+
+🔹 Steps
+
+Sort the array
+Initialize:
+i = 0
+j = len(arr) - 1
+While i < j:
+Compute sum
+Move pointers based on comparison
+Return result
+
+
+📘 Find Single Element in Array
+
+🔹 Approach (Brute Force Method)
+
+Traverse each element in the array.
+
+Count how many times it appears.
+
+If count equals 1 → return that element.
+
+If no element found → return -1.
+
+🔹 Steps
+
+Loop through array using index i
+
+For each element:
+
+Initialize count = 0
+
+Traverse entire array again
+
+Count occurrences
+
+If count == 1 → return element
+
+📘 Maximum Consecutive Ones
+
+🔹 Approach (Linear Traversal)
+
+Traverse the array once.
+
+Maintain:
+
+cnt → current consecutive count of 1’s
+
+maxi → maximum count found so far
+
+If element is 1 → increment count.
+
+If element is 0 → reset count to 0.
+
+Update maximum after each step.
+
+🔹 Steps
+
+Initialize:
+
+cnt = 0
+maxi = 0
+
+Loop through array:
+
+If value is 1 → cnt += 1
+
+Else → cnt = 0
+
+Update maxi = max(maxi, cnt)
+
+Return maxi
